@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useRef } from 'react';
 
 import styles from '@/styles/Home.module.scss';
@@ -18,6 +19,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <meta name='lush' content='Florist Landing Page' />
+        <title>Lush</title>
+      </Head>
       <Navbar myref={myref} />
       <Hero myref={myref} />
       <AboutUs />
