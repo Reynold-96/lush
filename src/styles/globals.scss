@@ -1,0 +1,85 @@
+:root {
+  --color-accent: #285a43;
+  --color-primary: #fff;
+  --foreground: #121212;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--color-black);
+  background-color: var(--color-primary);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+main {
+  font-family: var(--raleway-font);
+}
+
+%heading-default {
+  font-family: var(--lato-font);
+  color: var(--color, var(--color-accent));
+  height: fit-content;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+h1 {
+  @extend %heading-default;
+  font-weight: 400;
+  font-size: clamp(3.2rem, 6.25vw, 6.4rem);
+}
+
+h2 {
+  @extend %heading-default;
+  font-size: clamp(2.4rem, 6.5vw, 3.6rem);
+  text-align: var(--text-align, center);
+}
+
+h3 {
+  @extend %heading-default;
+  font-size: 2rem;
+}
+
+h4 {
+  @extend %heading-default;
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+  color: var(--color, var(--color-accent));
+  &:hover {
+    border-bottom: 1px solid;
+  }
+}
+
+svg {
+  display: block;
+  stroke-width: var(--stroke-width, 1.5px);
+  fill: var(--fill, var(--color-accent));
+  stroke: var(--stroke, var(--color-accent));
+  width: var(--width, 12.6rem);
+  height: var(--height, 12.6rem);
+}

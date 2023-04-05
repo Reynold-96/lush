@@ -1,0 +1,28 @@
+%card {
+  padding: 2rem 3rem;
+  background-color: var(--bgcolor, var(--color-primary));
+}
+
+.features {
+  @extend %card;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.02);
+  border-radius: 1rem;
+}
+
+.benefits {
+  @extend %card;
+  --bgcolor: #fcfcfc;
+  &:nth-child(2),
+  &:nth-child(3) {
+    --bgcolor: #f8f8f8;
+  }
+}
+
+.figcaption {
+  padding-inline: 2rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+}

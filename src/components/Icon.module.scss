@@ -1,0 +1,7 @@
+.icon {
+  display: block;
+  fill: var(--fill, none);
+  stroke: var(--stroke, var(--color-accent));
+  width: var(--width, 2.4rem);
+  height: var(--height, 2.4rem);
+}

@@ -1,0 +1,49 @@
+.container {
+  grid-column: 1 / -1;
+  position: relative;
+  height: 40rem;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  --fr: minmax(1rem, 1fr);
+  display: grid;
+  grid-template-columns: var(--fr) clamp(30rem, 90vw, 120rem) var(--fr);
+}
+
+.wrapper {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min(100%, 54rem));
+  grid-auto-rows: max-content;
+  place-content: center;
+  gap: 3.5rem;
+}
+
+.title {
+  --text-align: left;
+  --color: var(--color-primary);
+  max-width: 54rem;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.email {
+  flex-grow: 10;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: 0 60%;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+  .btn {
+    width: 100%;
+  }
+}

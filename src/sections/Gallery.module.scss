@@ -1,0 +1,31 @@
+@use '../styles/utilities.scss';
+
+.gallery {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(32rem, 1fr));
+  @media only screen and (max-width: 1160px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @extend %grid-section;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+
+  &:not(:first-child) {
+    aspect-ratio: 1 / 0.53;
+  }
+
+  &:first-child {
+    grid-row: span 2;
+  }
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}

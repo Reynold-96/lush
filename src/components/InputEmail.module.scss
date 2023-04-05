@@ -1,0 +1,21 @@
+.email {
+  min-width: 28rem;
+  max-width: 52rem;
+  color: var(--color-primary);
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: 1.2px;
+  height: 4.5rem;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 3px;
+  backdrop-filter: blur(5px);
+  padding: 1.2rem 2.5rem;
+
+  &::placeholder {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+}

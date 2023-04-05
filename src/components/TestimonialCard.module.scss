@@ -1,0 +1,37 @@
+.container {
+  --bgcolor: #f8f8f8;
+  display: grid;
+  grid-template-columns: 6.4rem 1fr;
+  grid-template-rows: 6.4rem 1fr;
+  gap: 3rem 2rem;
+  padding: 4rem 4.4rem;
+  background-color: var(--bgcolor);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.user {
+  border-radius: 99rem;
+}
+
+.name {
+  align-self: center;
+}
+
+.testimony {
+  position: relative;
+  grid-column: span 2;
+  z-index: 1;
+}
+
+.bgImage {
+  --stroke: var(--bgcolor);
+  --fill: #ededed;
+  position: absolute;
+  width: 36rem;
+  height: 36rem;
+  right: -7rem;
+  bottom: -16rem;
+  z-index: 0;
+}

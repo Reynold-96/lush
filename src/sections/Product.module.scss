@@ -1,0 +1,11 @@
+@use '../styles/utilities.scss';
+.product {
+  grid-column: 2 / 3;
+  @extend %grid-section;
+}
+
+.products {
+  --min-width: 28rem;
+  --gap: 2.5rem;
+  @extend %grid;
+}

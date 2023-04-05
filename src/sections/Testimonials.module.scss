@@ -1,0 +1,15 @@
+@use '../styles/utilities.scss';
+.testimonial {
+  grid-column: 2 / 3;
+  @extend %grid-section;
+}
+
+.testimonials {
+  --min-width: 30rem;
+  --min-height: 33rem;
+  --gap: 3.5rem;
+  @media only screen and (max-width: 670px) {
+    --min-height: 1fr;
+  }
+  @extend %grid;
+}

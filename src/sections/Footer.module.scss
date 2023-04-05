@@ -1,0 +1,87 @@
+@use '../styles/utilities.scss';
+
+.footer {
+  grid-column: 1 / -1;
+  background-color: var(--color-accent);
+  position: relative;
+  overflow: hidden;
+  --color: var(--color-primary);
+}
+
+.wrapper {
+  display: grid;
+  gap: 35px;
+  padding-block: 7rem;
+}
+
+.socialLinks {
+  @extend %grid-section;
+  --gap: clamp(35px, 10vw, 70px);
+  grid-template-columns: repeat(3, 56px);
+  justify-content: center;
+  z-index: 3;
+}
+
+.socialLink {
+  display: block;
+  padding: 1.2rem;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 99rem;
+  border: 1px solid var(--color-primary);
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  --stroke: var(--color-primary);
+}
+
+.navLinks {
+  @extend %grid-section;
+  --gap: 1.5rem 2.5rem;
+  --color: var(--color-primary);
+  grid-template-columns: repeat(auto-fit, 10rem);
+  justify-content: center;
+  z-index: 3;
+  text-transform: capitalize;
+}
+
+.copyright {
+  position: relative;
+  z-index: 3;
+  padding-block: 8px;
+  background-color: var(--foreground);
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  & > span {
+    white-space: nowrap;
+  }
+}
+
+%bgSvg {
+  --color: rgba(255, 255, 255, 0.1);
+  display: block;
+  position: absolute;
+  --fill: var(--color);
+  --stroke: var(--color);
+  stroke-width: 0px;
+  bottom: -150px;
+  z-index: 1;
+  @media only screen and (max-width: 1023px) {
+    display: none;
+  }
+}
+.bgSvg1 {
+  @extend %bgSvg;
+  left: 0;
+  width: 410px;
+  height: 410px;
+}
+.bgSvg2 {
+  @extend %bgSvg;
+  right: 0;
+  width: 360px;
+  height: 360px;
+}

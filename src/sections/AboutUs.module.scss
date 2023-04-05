@@ -1,0 +1,36 @@
+@use '../styles/utilities.scss';
+
+.aboutUs {
+  grid-column: 2 / 3;
+  @extend %grid-section;
+}
+
+.header {
+  --text-align: left;
+  display: flex;
+  justify-content: center;
+  @media only screen and (max-width: 932px) {
+    --text-align: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+.title {
+  width: min(100%, 48rem);
+  flex-shrink: 0;
+  & > span {
+    white-space: nowrap;
+  }
+}
+
+.features {
+  --min-width: 30rem;
+  --min-height: 38rem;
+  --gap: 3.5rem;
+  @media only screen and (max-width: 670px) {
+    --min-height: 1fr;
+  }
+  @extend %grid;
+}

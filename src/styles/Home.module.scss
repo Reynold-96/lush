@@ -1,0 +1,12 @@
+.home {
+  --fr: minmax(1rem, 1fr);
+  display: grid;
+  grid-template-columns: var(--fr) clamp(30rem, 90vw, 120rem) var(--fr);
+  grid-auto-flow: row;
+  justify-items: center;
+  row-gap: clamp(6rem, 10vw, 12rem);
+
+  & > * {
+    width: 100%;
+  }
+}

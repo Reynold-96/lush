@@ -1,0 +1,46 @@
+@use '../styles/utilities.scss';
+.hero {
+  grid-column: 1 / -1;
+  --color: var(--color-primary);
+  height: 85vh;
+  position: relative;
+  --fr: minmax(1rem, 1fr);
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: var(--fr) clamp(30rem, 90vw, 120rem) var(--fr);
+}
+
+.wrapper {
+  grid-column: 2;
+  display: grid;
+  grid-auto-rows: min-content;
+  align-content: center;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1rem;
+  & > span {
+    white-space: nowrap;
+  }
+}
+
+.subtitle {
+  color: var(--color);
+  width: min(100%, 78.7rem);
+  margin-inline: auto;
+  margin-bottom: min(5vw, 3.5rem);
+}
+
+.cta {
+  --gap: 1rem 2.5rem;
+  @extend %grid-section;
+  grid-template-columns: repeat(auto-fit, 170px);
+  justify-content: center;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: 50% 40%;
+  z-index: -1;
+}

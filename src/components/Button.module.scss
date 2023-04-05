@@ -1,0 +1,42 @@
+.btn {
+  color: var(--color, var(--color-primary));
+  background-color: var(--background-color, var(--color-accent));
+  border: {
+    color: var(--border-color, var(--color-accent));
+    width: 1px;
+    style: solid;
+  }
+  font: {
+    size: 1.4rem;
+    weight: 700;
+    family: var(--lato-font);
+  }
+  cursor: pointer;
+  text-transform: capitalize;
+  border-radius: 3px;
+}
+
+.primary {
+  --border-color: var(--color-accent);
+  --background-color: var(--color-accent);
+}
+.secondary-green {
+  --color: var(--color-accent);
+  --background-color: transparent;
+}
+.secondary-white {
+  --border-color: var(--color-primary);
+  --background-color: transparent;
+}
+.xsmall {
+  width: 9.8rem;
+  height: 3.3rem;
+}
+.small {
+  width: 14.5rem;
+  height: 4.5rem;
+}
+.large {
+  width: 17rem;
+  height: 5rem;
+}
